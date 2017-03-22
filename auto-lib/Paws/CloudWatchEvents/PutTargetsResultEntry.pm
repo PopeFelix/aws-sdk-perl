@@ -33,24 +33,26 @@ Use accessors for each attribute. If Att1 is expected to be an Paws::CloudWatchE
 
 =head1 DESCRIPTION
 
-Represents a target that failed to be added to a rule.
+A PutTargetsResult contains a list of PutTargetsResultEntry.
 
 =head1 ATTRIBUTES
 
 
 =head2 ErrorCode => Str
 
-  The error code that indicates why the target addition failed.
+  The error code representing why the target submission failed on this
+entry.
 
 
 =head2 ErrorMessage => Str
 
-  The error message that explains why the target addition failed.
+  The error message explaining why the target submission failed on this
+entry.
 
 
 =head2 TargetId => Str
 
-  The ID of the target.
+  The ID of the target submitted to Amazon CloudWatch Events.
 
 
 

@@ -35,7 +35,7 @@ Use accessors for each attribute. If Att1 is expected to be an Paws::CloudWatchE
 
 =head1 DESCRIPTION
 
-Represents an event to be submitted.
+Contains information about the event to be used in PutEvents.
 
 =head1 ATTRIBUTES
 
@@ -43,7 +43,7 @@ Represents an event to be submitted.
 =head2 Detail => Str
 
   In the JSON sense, an object containing fields, which may also contain
-nested subobjects. No constraints are imposed on its contents.
+nested sub-objects. No constraints are imposed on its contents.
 
 
 =head2 DetailType => Str
@@ -65,8 +65,8 @@ event primarily concerns. Any number, including zero, may be present.
 
 =head2 Time => Str
 
-  The timestamp of the event, per RFC3339. If no timestamp is provided,
-the timestamp of the PutEvents call is used.
+  Timestamp of event, per RFC3339. If no timestamp is provided, the
+timestamp of the PutEvents call will be used.
 
 
 

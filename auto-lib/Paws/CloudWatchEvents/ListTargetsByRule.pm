@@ -43,14 +43,14 @@ The maximum number of results to return.
 
 =head2 NextToken => Str
 
-The token returned by a previous call to retrieve the next set of
-results.
+The token returned by a previous call to indicate that there is more
+data available.
 
 
 
 =head2 B<REQUIRED> Rule => Str
 
-The name of the rule.
+The name of the rule whose targets you want to list.
 
 
 

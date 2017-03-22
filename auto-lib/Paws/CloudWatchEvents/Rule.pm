@@ -37,7 +37,8 @@ Use accessors for each attribute. If Att1 is expected to be an Paws::CloudWatchE
 
 =head1 DESCRIPTION
 
-Contains information about a rule in Amazon CloudWatch Events.
+Contains information about a rule in Amazon CloudWatch Events. A
+ListRulesResult contains a list of Rules.
 
 =head1 ATTRIBUTES
 
@@ -59,13 +60,13 @@ Contains information about a rule in Amazon CloudWatch Events.
 
 =head2 Name => Str
 
-  The name of the rule.
+  The rule's name.
 
 
 =head2 RoleArn => Str
 
-  The Amazon Resource Name (ARN) of the role that is used for target
-invocation.
+  The Amazon Resource Name (ARN) associated with the role that is used
+for target invocation.
 
 
 =head2 ScheduleExpression => Str
@@ -76,7 +77,7 @@ minutes)".
 
 =head2 State => Str
 
-  The state of the rule.
+  The rule's state.
 
 
 

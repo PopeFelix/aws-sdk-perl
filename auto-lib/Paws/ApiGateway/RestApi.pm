@@ -29,7 +29,7 @@ the RestApi supports only UTF-8-encoded text payloads.
 
 =head2 CreatedDate => Str
 
-The timestamp when the API was created.
+The date when the API was created, in ISO 8601 format.
 
 
 =head2 Description => Str

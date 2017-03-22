@@ -17,7 +17,7 @@ Paws::CloudWatchEvents::PutTargetsResponse
 
 =head2 FailedEntries => ArrayRef[L<Paws::CloudWatchEvents::PutTargetsResultEntry>]
 
-The failed target entries.
+An array of failed target entries.
 
 
 =head2 FailedEntryCount => Int

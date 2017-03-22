@@ -24,7 +24,7 @@ attribute value is the value.
 
 =head2 NextToken => Str
 
-The pagination token.
+Token used for pagination.
 
 
 =head2 _request_id => Str

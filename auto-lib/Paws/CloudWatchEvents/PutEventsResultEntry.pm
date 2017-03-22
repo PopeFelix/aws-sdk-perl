@@ -33,24 +33,26 @@ Use accessors for each attribute. If Att1 is expected to be an Paws::CloudWatchE
 
 =head1 DESCRIPTION
 
-Represents an event that failed to be submitted.
+A PutEventsResult contains a list of PutEventsResultEntry.
 
 =head1 ATTRIBUTES
 
 
 =head2 ErrorCode => Str
 
-  The error code that indicates why the event submission failed.
+  The error code representing why the event submission failed on this
+entry.
 
 
 =head2 ErrorMessage => Str
 
-  The error message that explains why the event submission failed.
+  The error message explaining why the event submission failed on this
+entry.
 
 
 =head2 EventId => Str
 
-  The ID of the event.
+  The ID of the event submitted to Amazon CloudWatch Events.
 
 
 

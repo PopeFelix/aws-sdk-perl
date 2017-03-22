@@ -45,7 +45,7 @@ the following ways:
 
 =item *
 
-I<$ObjectIdentifier> - Identifies the object by C<ObjectIdentifier>
+I<$ObjectIdentifier> - Identifies the object by ObjectIdentifier
 
 =item *
 

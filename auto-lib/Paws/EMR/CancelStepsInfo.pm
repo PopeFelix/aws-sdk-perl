@@ -33,26 +33,24 @@ Use accessors for each attribute. If Att1 is expected to be an Paws::EMR::Cancel
 
 =head1 DESCRIPTION
 
-Specification of the status of a CancelSteps request. Available only in
-Amazon EMR version 4.8.0 and later, excluding version 5.0.0.
+This class has no description
 
 =head1 ATTRIBUTES
 
 
 =head2 Reason => Str
 
-  The reason for the failure if the CancelSteps request fails.
+  
 
 
 =head2 Status => Str
 
-  The status of a CancelSteps Request. The value may be SUBMITTED or
-FAILED.
+  
 
 
 =head2 StepId => Str
 
-  The encrypted StepId of a step.
+  
 
 
 

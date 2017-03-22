@@ -43,14 +43,15 @@ The maximum number of results to return.
 
 =head2 NextToken => Str
 
-The token returned by a previous call to retrieve the next set of
-results.
+The token returned by a previous call to indicate that there is more
+data available.
 
 
 
 =head2 B<REQUIRED> TargetArn => Str
 
-The Amazon Resource Name (ARN) of the target resource.
+The Amazon Resource Name (ARN) of the target resource that you want to
+list the rules for.
 
 
 

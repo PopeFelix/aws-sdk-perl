@@ -31,8 +31,7 @@ Use accessors for each attribute. If Att1 is expected to be an Paws::EMR::Bootst
 
 =head1 DESCRIPTION
 
-Reports the configuration of a bootstrap action in a cluster (job
-flow).
+Reports the configuration of a bootstrap action in a job flow.
 
 =head1 ATTRIBUTES
 

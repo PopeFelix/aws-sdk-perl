@@ -138,12 +138,13 @@ the backup is created.
 
 =head2 S3DataSize => Int
 
-  This field is deprecated and is no longer used.
+  The size of the backup, in bytes. The size is returned by the instance
+in the command results.
 
 
 =head2 S3DataUrl => Str
 
-  This field is deprecated and is no longer used.
+  The Amazon S3 URL of the backup's tar.gz file.
 
 
 =head2 S3LogUrl => Str

@@ -46,8 +46,8 @@ a single page. This is for future use and is not supported currently.
 
 =head2 NextToken => Str
 
-The pagination token. This is for future use. Currently pagination is
-not supported for tagging.
+Next token used for pagination. This is for future use. Currently
+pagination is not supported for tagging.
 
 
 

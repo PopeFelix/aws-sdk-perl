@@ -1,7 +1,6 @@
 package Paws::EMR::PlacementType;
   use Moose;
-  has AvailabilityZone => (is => 'ro', isa => 'Str');
-  has AvailabilityZones => (is => 'ro', isa => 'ArrayRef[Str|Undef]');
+  has AvailabilityZone => (is => 'ro', isa => 'Str', required => 1);
 1;
 
 ### main pod documentation begin ###
@@ -21,7 +20,7 @@ Each attribute should be used as a named argument in the calls that expect this 
 
 As an example, if Att1 is expected to be a Paws::EMR::PlacementType object:
 
-  $service_obj->Method(Att1 => { AvailabilityZone => $value, ..., AvailabilityZones => $value  });
+  $service_obj->Method(Att1 => { AvailabilityZone => $value, ..., AvailabilityZone => $value  });
 
 =head3 Results returned from an API call
 
@@ -32,28 +31,14 @@ Use accessors for each attribute. If Att1 is expected to be an Paws::EMR::Placem
 
 =head1 DESCRIPTION
 
-The Amazon EC2 Availability Zone configuration of the cluster (job
-flow).
+The Amazon EC2 location for the job flow.
 
 =head1 ATTRIBUTES
 
 
-=head2 AvailabilityZone => Str
+=head2 B<REQUIRED> AvailabilityZone => Str
 
-  The Amazon EC2 Availability Zone for the cluster. C<AvailabilityZone>
-is used for uniform instance groups, while C<AvailabilityZones>
-(plural) is used for instance fleets.
-
-
-=head2 AvailabilityZones => ArrayRef[Str|Undef]
-
-  When multiple Availability Zones are specified, Amazon EMR evaluates
-them and launches instances in the optimal Availability Zone.
-C<AvailabilityZones> is used for instance fleets, while
-C<AvailabilityZone> (singular) is used for uniform instance groups.
-
-The instance fleet configuration is available only in Amazon EMR
-versions 4.8.0 and later, excluding 5.0.x versions.
+  The Amazon EC2 Availability Zone for the job flow.
 
 
 

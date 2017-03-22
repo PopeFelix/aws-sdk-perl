@@ -19,11 +19,6 @@ package Paws::DeviceFarm;
     my $call_object = $self->new_with_coercions('Paws::DeviceFarm::CreateDevicePool', @_);
     return $self->caller->do_call($self, $call_object);
   }
-  sub CreateNetworkProfile {
-    my $self = shift;
-    my $call_object = $self->new_with_coercions('Paws::DeviceFarm::CreateNetworkProfile', @_);
-    return $self->caller->do_call($self, $call_object);
-  }
   sub CreateProject {
     my $self = shift;
     my $call_object = $self->new_with_coercions('Paws::DeviceFarm::CreateProject', @_);
@@ -42,11 +37,6 @@ package Paws::DeviceFarm;
   sub DeleteDevicePool {
     my $self = shift;
     my $call_object = $self->new_with_coercions('Paws::DeviceFarm::DeleteDevicePool', @_);
-    return $self->caller->do_call($self, $call_object);
-  }
-  sub DeleteNetworkProfile {
-    my $self = shift;
-    my $call_object = $self->new_with_coercions('Paws::DeviceFarm::DeleteNetworkProfile', @_);
     return $self->caller->do_call($self, $call_object);
   }
   sub DeleteProject {
@@ -92,11 +82,6 @@ package Paws::DeviceFarm;
   sub GetJob {
     my $self = shift;
     my $call_object = $self->new_with_coercions('Paws::DeviceFarm::GetJob', @_);
-    return $self->caller->do_call($self, $call_object);
-  }
-  sub GetNetworkProfile {
-    my $self = shift;
-    my $call_object = $self->new_with_coercions('Paws::DeviceFarm::GetNetworkProfile', @_);
     return $self->caller->do_call($self, $call_object);
   }
   sub GetOfferingStatus {
@@ -157,11 +142,6 @@ package Paws::DeviceFarm;
   sub ListJobs {
     my $self = shift;
     my $call_object = $self->new_with_coercions('Paws::DeviceFarm::ListJobs', @_);
-    return $self->caller->do_call($self, $call_object);
-  }
-  sub ListNetworkProfiles {
-    my $self = shift;
-    my $call_object = $self->new_with_coercions('Paws::DeviceFarm::ListNetworkProfiles', @_);
     return $self->caller->do_call($self, $call_object);
   }
   sub ListOfferings {
@@ -242,11 +222,6 @@ package Paws::DeviceFarm;
   sub UpdateDevicePool {
     my $self = shift;
     my $call_object = $self->new_with_coercions('Paws::DeviceFarm::UpdateDevicePool', @_);
-    return $self->caller->do_call($self, $call_object);
-  }
-  sub UpdateNetworkProfile {
-    my $self = shift;
-    my $call_object = $self->new_with_coercions('Paws::DeviceFarm::UpdateNetworkProfile', @_);
     return $self->caller->do_call($self, $call_object);
   }
   sub UpdateProject {
@@ -553,7 +528,7 @@ package Paws::DeviceFarm;
   }
 
 
-  sub operations { qw/CreateDevicePool CreateNetworkProfile CreateProject CreateRemoteAccessSession CreateUpload DeleteDevicePool DeleteNetworkProfile DeleteProject DeleteRemoteAccessSession DeleteRun DeleteUpload GetAccountSettings GetDevice GetDevicePool GetDevicePoolCompatibility GetJob GetNetworkProfile GetOfferingStatus GetProject GetRemoteAccessSession GetRun GetSuite GetTest GetUpload InstallToRemoteAccessSession ListArtifacts ListDevicePools ListDevices ListJobs ListNetworkProfiles ListOfferings ListOfferingTransactions ListProjects ListRemoteAccessSessions ListRuns ListSamples ListSuites ListTests ListUniqueProblems ListUploads PurchaseOffering RenewOffering ScheduleRun StopRemoteAccessSession StopRun UpdateDevicePool UpdateNetworkProfile UpdateProject / }
+  sub operations { qw/CreateDevicePool CreateProject CreateRemoteAccessSession CreateUpload DeleteDevicePool DeleteProject DeleteRemoteAccessSession DeleteRun DeleteUpload GetAccountSettings GetDevice GetDevicePool GetDevicePoolCompatibility GetJob GetOfferingStatus GetProject GetRemoteAccessSession GetRun GetSuite GetTest GetUpload InstallToRemoteAccessSession ListArtifacts ListDevicePools ListDevices ListJobs ListOfferings ListOfferingTransactions ListProjects ListRemoteAccessSessions ListRuns ListSamples ListSuites ListTests ListUniqueProblems ListUploads PurchaseOffering RenewOffering ScheduleRun StopRemoteAccessSession StopRun UpdateDevicePool UpdateProject / }
 
 1;
 
@@ -596,16 +571,7 @@ Returns: a L<Paws::DeviceFarm::CreateDevicePoolResult> instance
   Creates a device pool.
 
 
-=head2 CreateNetworkProfile(Name => Str, ProjectArn => Str, [Description => Str, DownlinkBandwidthBits => Int, DownlinkDelayMs => Int, DownlinkJitterMs => Int, DownlinkLossPercent => Int, Type => Str, UplinkBandwidthBits => Int, UplinkDelayMs => Int, UplinkJitterMs => Int, UplinkLossPercent => Int])
-
-Each argument is described in detail in: L<Paws::DeviceFarm::CreateNetworkProfile>
-
-Returns: a L<Paws::DeviceFarm::CreateNetworkProfileResult> instance
-
-  Creates a network profile.
-
-
-=head2 CreateProject(Name => Str, [DefaultJobTimeoutMinutes => Int])
+=head2 CreateProject(Name => Str)
 
 Each argument is described in detail in: L<Paws::DeviceFarm::CreateProject>
 
@@ -640,15 +606,6 @@ Returns: a L<Paws::DeviceFarm::DeleteDevicePoolResult> instance
 
   Deletes a device pool given the pool ARN. Does not allow deletion of
 curated pools owned by the system.
-
-
-=head2 DeleteNetworkProfile(Arn => Str)
-
-Each argument is described in detail in: L<Paws::DeviceFarm::DeleteNetworkProfile>
-
-Returns: a L<Paws::DeviceFarm::DeleteNetworkProfileResult> instance
-
-  Deletes a network profile.
 
 
 =head2 DeleteProject(Arn => Str)
@@ -735,15 +692,6 @@ Each argument is described in detail in: L<Paws::DeviceFarm::GetJob>
 Returns: a L<Paws::DeviceFarm::GetJobResult> instance
 
   Gets information about a job.
-
-
-=head2 GetNetworkProfile(Arn => Str)
-
-Each argument is described in detail in: L<Paws::DeviceFarm::GetNetworkProfile>
-
-Returns: a L<Paws::DeviceFarm::GetNetworkProfileResult> instance
-
-  Returns information about a network profile.
 
 
 =head2 GetOfferingStatus([NextToken => Str])
@@ -859,15 +807,6 @@ Each argument is described in detail in: L<Paws::DeviceFarm::ListJobs>
 Returns: a L<Paws::DeviceFarm::ListJobsResult> instance
 
   Gets information about jobs.
-
-
-=head2 ListNetworkProfiles(Arn => Str, [NextToken => Str, Type => Str])
-
-Each argument is described in detail in: L<Paws::DeviceFarm::ListNetworkProfiles>
-
-Returns: a L<Paws::DeviceFarm::ListNetworkProfilesResult> instance
-
-  Returns the list of available network profiles.
 
 
 =head2 ListOfferings([NextToken => Str])
@@ -997,7 +936,7 @@ operation. Please contact aws-devicefarm-support@amazon.com if you
 believe that you should be able to invoke this operation.
 
 
-=head2 ScheduleRun(DevicePoolArn => Str, ProjectArn => Str, Test => L<Paws::DeviceFarm::ScheduleRunTest>, [AppArn => Str, Configuration => L<Paws::DeviceFarm::ScheduleRunConfiguration>, ExecutionConfiguration => L<Paws::DeviceFarm::ExecutionConfiguration>, Name => Str])
+=head2 ScheduleRun(DevicePoolArn => Str, ProjectArn => Str, Test => L<Paws::DeviceFarm::ScheduleRunTest>, [AppArn => Str, Configuration => L<Paws::DeviceFarm::ScheduleRunConfiguration>, Name => Str])
 
 Each argument is described in detail in: L<Paws::DeviceFarm::ScheduleRun>
 
@@ -1041,16 +980,7 @@ attributes and the pool ARN. Rule updates are all-or-nothing, meaning
 they can only be updated as a whole (or not at all).
 
 
-=head2 UpdateNetworkProfile(Arn => Str, [Description => Str, DownlinkBandwidthBits => Int, DownlinkDelayMs => Int, DownlinkJitterMs => Int, DownlinkLossPercent => Int, Name => Str, Type => Str, UplinkBandwidthBits => Int, UplinkDelayMs => Int, UplinkJitterMs => Int, UplinkLossPercent => Int])
-
-Each argument is described in detail in: L<Paws::DeviceFarm::UpdateNetworkProfile>
-
-Returns: a L<Paws::DeviceFarm::UpdateNetworkProfileResult> instance
-
-  Updates the network profile with specific settings.
-
-
-=head2 UpdateProject(Arn => Str, [DefaultJobTimeoutMinutes => Int, Name => Str])
+=head2 UpdateProject(Arn => Str, [Name => Str])
 
 Each argument is described in detail in: L<Paws::DeviceFarm::UpdateProject>
 

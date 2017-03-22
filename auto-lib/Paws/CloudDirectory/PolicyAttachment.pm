@@ -33,25 +33,25 @@ Use accessors for each attribute. If Att1 is expected to be an Paws::CloudDirect
 
 =head1 DESCRIPTION
 
-Contains the C<PolicyType>, C<PolicyId>, and the C<ObjectIdentifier> to
-which it is attached.
+Contains the PolicyType, PolicyId, and the ObjectIdentifier to which it
+is attached.
 
 =head1 ATTRIBUTES
 
 
 =head2 ObjectIdentifier => Str
 
-  The C<ObjectIdentifier> associated with C<PolicyAttachment>.
+  The ObjectIdentifier associated with PolicyAttachment.
 
 
 =head2 PolicyId => Str
 
-  The ID of C<PolicyAttachment>.
+  The ID of PolicyAttachment.
 
 
 =head2 PolicyType => Str
 
-  The type of policy that can be associated with C<PolicyAttachment>.
+  The type of policy that can be associated with PolicyAttachment.
 
 
 

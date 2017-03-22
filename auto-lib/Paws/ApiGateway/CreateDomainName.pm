@@ -1,11 +1,10 @@
 
 package Paws::ApiGateway::CreateDomainName;
   use Moose;
-  has CertificateArn => (is => 'ro', isa => 'Str');
-  has CertificateBody => (is => 'ro', isa => 'Str');
-  has CertificateChain => (is => 'ro', isa => 'Str');
-  has CertificateName => (is => 'ro', isa => 'Str');
-  has CertificatePrivateKey => (is => 'ro', isa => 'Str');
+  has CertificateBody => (is => 'ro', isa => 'Str', required => 1);
+  has CertificateChain => (is => 'ro', isa => 'Str', required => 1);
+  has CertificateName => (is => 'ro', isa => 'Str', required => 1);
+  has CertificatePrivateKey => (is => 'ro', isa => 'Str', required => 1);
   has DomainName => (is => 'ro', isa => 'Str', required => 1);
 
   use MooseX::ClassAttribute;
@@ -40,47 +39,39 @@ Values for attributes that are native types (Int, String, Float, etc) can passed
 =head1 ATTRIBUTES
 
 
-=head2 CertificateArn => Str
+=head2 B<REQUIRED> CertificateBody => Str
 
-The reference to an AWS-managed certificate. AWS Certificate Manager is
-the only supported source.
-
-
-
-=head2 CertificateBody => Str
-
-[Deprecated] The body of the server certificate provided by your
-certificate authority.
+The body of the server certificate provided by your certificate
+authority.
 
 
 
-=head2 CertificateChain => Str
+=head2 B<REQUIRED> CertificateChain => Str
 
-[Deprecated] The intermediate certificates and optionally the root
-certificate, one after the other without any blank lines. If you
-include the root certificate, your certificate chain must start with
-intermediate certificates and end with the root certificate. Use the
-intermediate certificates that were provided by your certificate
-authority. Do not include any intermediaries that are not in the chain
-of trust path.
-
-
-
-=head2 CertificateName => Str
-
-The user-friendly name of the certificate.
+The intermediate certificates and optionally the root certificate, one
+after the other without any blank lines. If you include the root
+certificate, your certificate chain must start with intermediate
+certificates and end with the root certificate. Use the intermediate
+certificates that were provided by your certificate authority. Do not
+include any intermediaries that are not in the chain of trust path.
 
 
 
-=head2 CertificatePrivateKey => Str
+=head2 B<REQUIRED> CertificateName => Str
 
-[Deprecated] Your certificate's private key.
+The name of the certificate.
+
+
+
+=head2 B<REQUIRED> CertificatePrivateKey => Str
+
+Your certificate's private key.
 
 
 
 =head2 B<REQUIRED> DomainName => Str
 
-(Required) The name of the DomainName resource.
+The name of the DomainName resource.
 
 
 

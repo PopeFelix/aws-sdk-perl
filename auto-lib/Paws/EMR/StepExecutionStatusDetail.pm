@@ -62,7 +62,7 @@ The execution state of a step.
 
 =head2 B<REQUIRED> State => Str
 
-  The state of the step.
+  The state of the job flow step.
 
 
 

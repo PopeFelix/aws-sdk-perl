@@ -48,7 +48,7 @@ The identifier of a client certificate for an API stage.
 
 =head2 CreatedDate => Str
 
-The timestamp when the stage was created.
+The date and time that the stage was created, in ISO 8601 format.
 
 
 =head2 DeploymentId => Str
@@ -68,7 +68,8 @@ The version of the associated API documentation.
 
 =head2 LastUpdatedDate => Str
 
-The timestamp when the stage last updated.
+The date and time that information about the stage was last updated, in
+ISO 8601 format.
 
 
 =head2 MethodSettings => L<Paws::ApiGateway::MapOfMethodSettings>
